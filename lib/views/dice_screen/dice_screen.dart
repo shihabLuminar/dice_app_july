@@ -10,6 +10,15 @@ class DiceScreen extends StatefulWidget {
 }
 
 class _DiceScreenState extends State<DiceScreen> {
+  List dices = [
+    "assets/images/d1.png",
+    "assets/images/d2.png",
+    "assets/images/d3.png",
+    "assets/images/d4.png",
+    "assets/images/d5.png",
+    "assets/images/d6.png",
+  ];
+
   int? randonNumber;
   @override
   Widget build(BuildContext context) {
@@ -26,7 +35,7 @@ class _DiceScreenState extends State<DiceScreen> {
               width: 200,
               randonNumber == null
                   ? "assets/images/button.png"
-                  : "assets/images/d$randonNumber.png"),
+                  : dices[randonNumber!]),
         ),
       ),
     );
